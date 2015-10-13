@@ -24,7 +24,9 @@
 #include <cutils/iosched_policy.h>
 
 #ifdef HAVE_ANDROID_OS
+#include <log/log.h>
 #include <linux/ioprio.h>
+#include <pthread.h>
 #include <sys/syscall.h>
 #define __android_unused
 #else
