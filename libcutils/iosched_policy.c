@@ -1,10 +1,6 @@
 /*
-<<<<<<< HEAD
-** Copyright 2007, The Android Open Source Project
-=======
 ** Copyright 2007-2014, The Android Open Source Project
 ** Copyright 2015, The CyanogenMod Project
->>>>>>> 8df64c7... cutils: Remove ioprio magic
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -25,8 +21,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include <cutils/iosched_policy.h>
+#define LOG_TAG "iosched_policy"
+#include <cutils/log.h>
+
+#define __android_unused __attribute__((__unused__))
 
 #define __android_unused __attribute__((__unused__))
 
